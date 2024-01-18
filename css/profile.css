@@ -1,0 +1,56 @@
+
+.block {width: 350px; height: 350px;position: absolute;top: 48%;left: 48%;margin: -130px 0 0 -130px;}
+.sidebar {margin: 0;padding: 0;width: 200px;background-color: #1D1D1E;position: fixed;height: 100%;overflow: auto;}
+.sidebar a {display: block;color: #fff;padding: 16px;text-decoration: none;}
+.sidebar a.active {background-color: #04AA6D;color: white;}
+.sidebar a:hover:not(.active) {background-color: #04AA6D;color: white;}
+.content {margin-left: 200px; padding: 1px 16px; height: 500px;}
+textarea {height: 150px;}
+@media screen and (max-width: 700px) {.sidebar {width: 100%;height: auto;position: relative; margin-bottom: 10px;}.sidebar {float: left;}.content {margin-left: 0; float: left;}}
+@media screen and (max-width: 768px) {.sidebar a {float: none;}}
+.img-avatar {width: 200px;height: 200px; border-radius: 8px; border: 2px solid #04AA6D; overflow: hidden;}
+.img-avatar img {
+	display: block;
+  	width: 100%;
+  	height: 100%;
+  	object-fit: cover;
+}
+.btn-outline-success:hover {background: #28A750; transition: 0.3s;}
+.btn-success {
+	background: #1F8E42;
+	border: none;
+}
+
+.btn-danger {
+	background: #C22E2E;
+	border: none;
+}
+
+.btn-danger:hover {
+	transition: 0.3s;
+	background: #DF2626;
+}
+
+.modal-dialog {
+	margin-top: 100px;
+}
+.modal-content {
+	border: 2px solid #28A750;
+	border-radius: 5px;
+}
+
+.pass {
+	padding: 5px;
+	border-radius: 3px;
+	border: none;
+	background: #EEEAEA;
+	color: #13642C;
+	width: 100%;
+}
+.btn-close:focus {
+	outline: none;
+}
+
+.pass:focus {
+	outline: none;
+}

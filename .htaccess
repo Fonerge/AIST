@@ -1,0 +1,37 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+RewriteCond %{THE_REQUEST} ([^\s]*)\/{2,}(\?[^\s]*)?
+RewriteRule (.*) %1 [R=301,L]
+
+RewriteRule ^/*$ ./index.php
+RewriteRule ^about*$ ./about.php
+RewriteRule ^contact*$ ./contact.php
+RewriteRule ^advertiser*$ ./advertiser.php
+RewriteRule ^useful-info*$ ./useful-info.php
+RewriteRule ^signin*$ ./signin.php
+RewriteRule ^signup*$ ./signup.php
+RewriteRule ^advertising-agreement*$ ./advertising-agreement.php
+RewriteRule ^profile*$ ./profile.php
+RewriteRule ^portal-rules*$ ./portal-rules.php
+RewriteRule ^add-post*$ ./add-post.php
+RewriteRule ^policy-personal-data*$ ./policy_personal_date.php
+RewriteRule ^privacy*$ ./policy.php
+RewriteRule ^category/estate*$ ./category/estate.php
+RewriteRule ^category/auto*$ ./category/auto.php
+RewriteRule ^category/electronic*$ ./category/electronic.php
+RewriteRule ^category/home*$ ./category/home.php
+RewriteRule ^category/work*$ ./category/work.php
+RewriteRule ^category/clothes*$ ./category/clothes.php
+RewriteRule ^category/services*$ ./category/services.php
+RewriteRule ^category/repair*$ ./category/repair.php
+RewriteRule ^category/tourism*$ ./category/tourism.php
+RewriteRule ^category/education*$ ./category/education.php
+RewriteRule ^post/([0-9]+)/?$ category/post.php?post=$1 [NC,L]
+
+ErrorDocument 404 /404.php
+ErrorDocument 403 /404.php
